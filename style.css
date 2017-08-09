@@ -3,3 +3,11 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+table {
+  border: 1px solid rgb(195, 195, 195);
+}
+table * {
+  border: 1px solid rgb(195, 195, 195);
+  padding: 10px;
+}

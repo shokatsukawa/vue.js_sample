@@ -29,6 +29,44 @@
       {{selected}}
     </section>
 
+    <!-- table -->
+    <section id="table">
+      <h2>Table</h2>
+      <table>
+        <tr>
+          <th>AAA</th>
+        </tr>
+        <tr v-for="data in datas">
+          <td>
+            {{data.val}}
+            <span>{{data.val}}</span>
+            <table-input :val="data.val"></table-input>
+            <message message="Tes"></message>
+            <message :message="data.val"></message>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- table2 -->
+    <section id="table2">
+      <h2>Table</h2>
+      <table>
+        <tbody>
+          <template v-for="data in datas">
+            <tr>
+              <td height="30" align="center" valign="middle" bgcolor="#a1dde8" style="line-height:1.2em;" rowspan="2">Rowspan - 2</td>
+              <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">{{data.val}}</td>
+              <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">{{data.val}}</td>
+            </tr>
+            <tr>
+              <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">{{data.val}}</td>
+              <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">{{data.val}}</td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </section>
   </div>
 </body>
 </html>
