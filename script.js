@@ -31,6 +31,7 @@ $(function() {
         methods: {
           // セレクトボックスチェンジイベント
           change: function (e) {
+            console.log(this);
             var val = $(e.target).val();
             alert('select -- val -- ' + val);
           }
@@ -53,10 +54,33 @@ $(function() {
     },
   });
 
-  // table2 --------------------------------------------------------------------
+  // Table Rowspan -------------------------------------------------------------
 
-  var Table2 = new Vue({
-    el: '#table2',
+  var TableRowspan = new Vue({
+    el: '#table-rowspan',
+    data: {
+      datas: [{val: 'A'}, {val: 'B'}, {val: 'C'}],
+    },
+  });
+
+  // Table Input ---------------------------------------------------------------
+
+  var TableInput = new Vue({
+    el: '#table-input',
+    components: {
+      'table-input': {
+        props: ['val'],
+        template: '<input type="text" id="" value="" style="width:auto; text-align:center;">',
+        methods: {
+          // セレクトボックスチェンジイベント
+          change: function (e) {
+            console.log(this);
+            var val = $(e.target).val();
+            alert('select -- val -- ' + val);
+          }
+        }
+      },
+    },
     data: {
       datas: [{val: 'A'}, {val: 'B'}, {val: 'C'}],
       methods: {
@@ -68,4 +92,22 @@ $(function() {
       }
     },
   });
+
+  // Table Title ---------------------------------------------------------------
+  var TableTitle = new Vue({
+    el: '#table-title',
+    data: {
+      a: 'A',
+      b: 'B',
+      c: 'C',
+    },
+  });
+
+
+
+
+
+
+
+
 });

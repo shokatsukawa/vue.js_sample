@@ -17,9 +17,10 @@
 <body>
   <div class="wrap">
 
-    <!-- select -->
+    <!-- Select -->
     <section id="select">
       <h2>Select</h2>
+      <p>セレクトボックスのイベントを取得</p>
       <select class="form-control" v-on:change="change" v-model="selected">
         <option class="">----</option>
         <option v-for="option in options" v-bind:value="option.val">
@@ -29,9 +30,10 @@
       {{selected}}
     </section>
 
-    <!-- table -->
+    <!-- Table -->
     <section id="table">
       <h2>Table</h2>
+      <p>input要素のイベントを取得</p>
       <table>
         <tr>
           <th>AAA</th>
@@ -48,9 +50,10 @@
       </table>
     </section>
 
-    <!-- table2 -->
-    <section id="table2">
-      <h2>Table</h2>
+    <!-- Table2 Rowspan -->
+    <section id="table-rowspan">
+      <h2>Table Rowspan</h2>
+      <p>v-forのrowspan対応</p>
       <table>
         <tbody>
           <template v-for="data in datas">
@@ -67,6 +70,79 @@
         </tbody>
       </table>
     </section>
+
+    <!-- Table Input -->
+    <section id="table-input">
+      <h2>Table Input</h2>
+      <p>テーブルにinputを組み込む</p>
+      <table>
+        <template v-for="data in datas">
+          <tr>
+            <td rowspan="3" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">坪井　 ヨシ子</td>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">
+              <table-input></table-input>
+            </td>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">
+              <table-input></table-input>
+            </td>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">
+              <table-input></table-input>
+            </td>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">
+              <table-input></table-input>
+            </td>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">
+              <table-input></table-input>
+            </td>
+          </tr>
+          <tr>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">
+              <table-input></table-input>
+            </td>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">
+              <table-input></table-input>
+            </td>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">
+              <table-input></table-input>
+            </td>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">
+              <table-input></table-input>
+            </td>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">
+              <table-input></table-input>
+            </td>
+          </tr>
+          <tr>
+            <td height="30" colspan="4" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">&nbsp;</td>
+            <td height="30" colspan="1" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">
+              <table-input></table-input>
+            </td>
+          </tr>
+        </template>
+      </table>
+    </section>
+
+    <!-- Table Title -->
+    <section id="table-title">
+      <h2>Table Title</h2>
+      <p>テーブルの行は固定で文言のみを変更</p>
+      <table>
+        <tbody>
+          <tr>
+            <td height="30" align="center" valign="middle" bgcolor="#a1dde8" style="line-height:1.2em;">{{a}}</td>
+            <td height="30" align="center" valign="middle" bgcolor="#a1dde8" style="line-height:1.2em;">{{b}}</td>
+            <td height="30" align="center" valign="middle" bgcolor="#a1dde8" style="line-height:1.2em;">{{c}}</td>
+          </tr>
+          <tr>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">AA</td>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">BB</td>
+            <td height="30" align="center" valign="middle" bgcolor="#FFFFFF" style="line-height:1.2em;">CC</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
   </div>
 </body>
 </html>
